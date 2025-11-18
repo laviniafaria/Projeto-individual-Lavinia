@@ -1,7 +1,7 @@
 # Projeto Individual Lavinia
 <p>Este repositório será utilizado para armazenar todo o conteúdo do projeto voltado para o incentivo ao conhecimento sobre o Baralho Cigano.</p>
-<img src="baralho.png" alt="Cartas" width="50" height="50">
-<br>
+<img src='[https://eu.beasensors.com/thumbor/oog2JENNqsE3p5cmdRreOcn07w4=/fit-in/1024x/--/uploads/2016/10/header-sliding-doors-orascan-scaled.jpg](https://i.pinimg.com/736x/d4/42/50/d44250074f790cb3c07e18d17f5e3bfd.jpg)'><br>
+<p>Imagem obtida na rede social Pinterest.</p>
 <h1> Meu Projeto foca em:</h1>
 <p>Este projeto nasceu da minha paixão pelo Baralho Cigano, influenciada por minha trajetória espiritual e experiências mediúnicas.
 Descobri afinidade natural com as leituras e reconheço a conexão espiritual que o baralho proporciona.</p>
