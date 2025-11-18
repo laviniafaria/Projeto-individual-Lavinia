@@ -1,4 +1,4 @@
-# 🌙 Projeto Individual – Lavinia  
+# Projeto Individual – Lavinia  
 **Baralho Cigano**
 
 Este repositório foi criado para armazenar todos os conteúdos referentes ao meu projeto individual, voltado ao incentivo do conhecimento sobre o **Baralho Cigano** e seu uso como ferramenta de desenvolvimento pessoal e espiritual.
