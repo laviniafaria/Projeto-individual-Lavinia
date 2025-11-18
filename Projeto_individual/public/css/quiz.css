@@ -24,7 +24,12 @@ body {
 .header {
     height: var(--tamanho-header);
     border-bottom: 2px solid gold;
+    background-color: rgba(71, 46, 81, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 
 .header .container {
     justify-content: space-between;
@@ -85,15 +90,12 @@ body {
     font-weight: 800;
 }
 
-/* bnt*/
 .social {
     background-color: #d8bddd;
     display: flex;
     padding: 200px;
     align-items: center;
 }
-
-
 
 .social .container .boxes {
     display: flex;
@@ -113,7 +115,7 @@ body {
     font-weight: 800;
 
 }
-
+/* bnt*/
 .boxes a {
     font-size: 22px;
     font-weight: bold;
