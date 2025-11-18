@@ -1,0 +1,203 @@
+        body {
+            color: #E8E8E8;
+            background-color: #472e51;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #pontuacaoEJogo {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 90%;
+            max-width: 450px;
+            padding: 30px;
+            background-color: #6c5d6c;
+            border-radius: 12px;
+            border: 3px solid gold;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #btnIniciarQuiz {
+            font-size: 22px;
+            font-weight: bold;
+            background-color: rgb(80, 0, 100);
+            color: gold;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid rgb(80, 0, 100);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        #btnIniciarQuiz:hover {
+            background-color: rgb(100, 0, 120);
+        }
+
+        #pontuacao,
+        #jogo {
+            color: #E8E8E8;
+            background-color: #6c5d6c;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .flex-colunar {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .width-fit-content {
+            width: fit-content;
+        }
+
+        .border-primary {
+            border: 3px solid rgb(137, 121, 32);
+            ;
+        }
+
+        .border-secondary {
+            border: 3px solid rgb(137, 121, 32);
+        }
+
+        .padding-8 {
+            padding: 8px 0;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        #opcoes span {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .option {
+            padding: 4px 8px;
+            margin-left: 8px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .text-success-with-bg {
+            color: #095c36;
+            background-color: #9dd3ba;
+        }
+
+        .text-warning-with-bg {
+            color: #705400;
+            background-color: #fdebb3;
+        }
+
+        .text-danger-with-bg {
+            color: #990c19;
+            background-color: #f0c1c6;
+        }
+
+        .text-new-gray {
+            color: #CCCCCC;
+        }
+
+        #botoes button {
+            padding: 10px 15px;
+            margin-top: 8px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, opacity 0.2s;
+            color: #E8E8E8;
+        }
+
+        #btnSubmeter {
+            background-color: #331138;
+        }
+
+        #btnSubmeter:hover:not(:disabled) {
+            background-color: #763bb2;
+            color: black;
+        }
+
+        #btnProx,
+        #btnTentarNovamente {
+            background-color: #331138;
+
+        }
+
+        #btnProx:hover:not(:disabled),
+        #btnTentarNovamente:hover:not(:disabled) {
+            background-color: #763bb2;
+            color: black;
+        }
+
+        #botoes button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #CCCCCC;
+            color: #666;
+
+        }
+        /* Estilo do alerta personalizado */
+        .alerta-personalizado {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conteudo-alerta {
+            background-color: #6c5d6c;
+            padding: 30px;
+            border-radius: 12px;
+            border: 3px solid gold;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .conteudo-alerta h3 {
+            color: gold;
+            margin-top: 0;
+        }
+
+        .conteudo-alerta p {
+            color: #E8E8E8;
+            margin: 20px 0;
+        }
+
+        .botao-alerta {
+            background-color: #331138;
+            color: gold;
+            border: 2px solid #331138;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botao-alerta:hover {
+            background-color: #763bb2;
+            color: black;
+        }
