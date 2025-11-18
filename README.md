@@ -11,4 +11,4 @@ Descobri afinidade natural com as leituras e reconheço a conexão espiritual qu
 lavinia.faria@sptech.school <br>
 Trello: (`https://trello.com/b/M2TotBpx/baralho-cigano`) <br>
 GitHub: (`https://github.com/laviniafaria/Projeto-individual-Lavinia.git`)<br>
-Figma: (``))<br>
+Figma: (`https://www.figma.com/design/IHxBLcv75SNMTuD6T56RM8/cadastro-e-login?node-id=0-1&t=Wh510WRj5ejP1V4s-1`))<br>
