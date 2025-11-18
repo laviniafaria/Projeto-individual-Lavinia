@@ -4,7 +4,7 @@
 Este repositório foi criado para armazenar todos os conteúdos referentes ao meu projeto individual, voltado ao incentivo do conhecimento sobre o **Baralho Cigano** e seu uso como ferramenta de desenvolvimento pessoal e espiritual.
 
 <p align="center">
-  <img src="assets/cigano.png" alt="Baralho Cigano" width="400"><br>
+  <img src="Projeto_individual/public/assets/cigano.png" alt="Baralho Cigano" width="400"><br>
   <em>Imagem criada na plataforma Gemini.</em>
 </p>
 
