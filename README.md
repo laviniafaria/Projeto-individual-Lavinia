@@ -1,105 +1,23 @@
-<img src="https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png" width="600px">
+Projeto Individual – Lavinia
 
-_Web Data Visualization = Visualização de Dados na Web_
+Baralho Cigano
 
-_Implementação de Referência para o seu Projeto de Primeiro Semestre_
+Este repositório foi criado para armazenar todos os conteúdos referentes ao meu projeto individual, voltado ao incentivo do conhecimento sobre o Baralho Cigano e seu uso como ferramenta de desenvolvimento pessoal e espiritual.
 
-<hr>
+Baralho Cigano
+Imagem criada na plataforma Gemini.
+Sobre o Projeto
 
-# Como usar
+Este projeto nasceu da minha paixão pelo Baralho Cigano, inspirada pela minha trajetória espiritual e experiências mediúnicas.
+Com o tempo, desenvolvi uma forte afinidade com as leituras e reconheci o quanto essa ferramenta pode auxiliar no autoconhecimento e na conexão espiritual.
+Objetivo
 
-1. Clone este repositório em sua máquina.
+Promover o conhecimento e a prática do Baralho Cigano, tornando-o acessível para quem deseja compreender seus significados, seus símbolos e sua capacidade de orientar caminhos e reflexões internas.
+Ferramentas e Materiais do Projeto
 
+    E-mail: lavinia.faria@sptech.school
+    Trello: https://trello.com/b/M2TotBpx/baralho-cigano
+    GitHub: https://github.com/laviniafaria/Projeto-individual-Lavinia.git
+    Figma: https://www.figma.com/design/IHxBLcv75SNMTuD6T56RM8/cadastro-e-login?node-id=0-1&t=Wh510WRj5ejP1V4s-1
 
-1. Crie, no Banco de Dados, as tabelas necessárias para o funcionamento deste projeto.
-- Siga as instruções no arquivo **/src/database/script-tabelas.sql**
-
-
-3. Acesse o arquivo **app.js** e parametrize o ambiente.
-- Se você estiver utilizando o Ambiente de Produção (remoto), comente a linha 2 e deixe habilitada a linha 1 onde está o valor **var ambiente_processo = 'producao';**
-- Se você estiver utilizando o Ambiente de Desenvolvimento (local), comente a linha 1 e deixe habilitada a linha 2 onde está o valor **var ambiente_processo = 'desenvolvimento';**
-
-4. Adicione as credenciais de Banco de Dados no arquivo **.env** ou em **.env.dev**, seguindo as instruções neste.
-
-5. Acesse este repositório no seu terminal (GitBash ou VSCode) e execute os comandos abaixo:
-
-```
-npm i
-``` 
-_O comando acima irá instalar as bibliotecas necessárias para o funcionamento do projeto. As bibliotecas a serem instaladas estão listadas no arquivo **package.json** então é muito importante que este não seja alterado. Será criada uma nova pasta/diretório chamado **node_modules** quando o comando for finalizado, que é onde as bibliotecas estão localizadas. Não altere a pasta/diretório._
-
-```
-npm start
-``` 
-
-_O comando acima irá iniciar seu projeto e efetuar os comandos de acordo com a sua parametrização feita nos passos anteriores._
-
-6. Para "ver" seu projeto funcionando, acesse em seu navegador o caminho **informado no terminal**.
-
-7. Caso queira parar a execução, tecle **CTRL+C** no terminal em que o projeto está rodando.
-
-## Adicionar novo recurso ao projeto
-
-**"Recurso? O que é?"** Enquanto no Banco de Dados chamamos as tabelas de "entidades", quando tratamos de desenvolvimento WEB usamos a palavra "recurso" para se referir a algo que podemos criar, ler, atualizar ou deletar [1]. Estas ações são conhecidas como CRUD: Create, Read, Update e Delete. Para acessar cada ação, usamos os métodos HTTP: POST, GET, PUT e DELETE [2]. (Há outros verbos, porém com estes já conseguimos efetuar CRUDs). 
-
-**Tabela para ajudar a fazer a associação**
-
-<table>
-  <tr>
-    <th>C.R.U.D</th>
-    <th>Ação</th>
-    <th>Tradução</th>
-    <th>Verbo HTTP *</th>
-    <th>Comando BD</th>
-  </tr>
-  <tr>
-    <td>C</td>
-    <td>Create</td>
-    <td>Criar</td>
-    <td>POST</td>
-    <td>INSERT</td>
-  </tr>
-  <tr>
-    <td>R</td>
-    <td>Read</td>
-    <td>Ler</td>
-    <td>GET</td>
-    <td>SELECT</td>
-  </tr>
-  <tr>
-    <td>U</td>
-    <td>Update</td>
-    <td>Atualizar</td>
-    <td>PUT</td>
-    <td>UPDATE</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>Delete</td>
-    <td>Deletar</td>
-    <td>DELETE</td>
-    <td>DELETE</td>
-  </tr>
-</table>
-
-_* Você verá o verbo HTTP sendo apontado nos arquivos em /routes_
-
-**"E no meu projeto, o que seria um recurso?"** Em web-data-viz manipulamos os recursos **usuário**, **aviso** e **medida**. Podemos conferir isso vendo para quais entidades foram criados os caminhos de inserção e captura de dados, que envolve os diretórios **routes**, **controllers** e **models**.
-
-Abaixo, uma figura que ajuda a compreender o caminho percorrido para, por exemplo, efetuar o cadastro de um usuário:
-
-
-![image](https://github.com/user-attachments/assets/d576f178-0da6-437e-b5c9-658e3ebaf6ca)
-
-
-
-**Entendi o que é um recurso e gostaria de adicionar um novo ao meu projeto! Como faz?**  
-- Primeiro, crie a tabela no Banco de Dados referente a este recurso. Exemplos de recursos comuns de serem adicionados ao projeto no primeiro semestre: Silo, Aquário, Sala, Andar, Endereço, Mercado, Prateleira, Unidade, Carro, Caminhão...  
-- Assim que criada a tabela, faça todo o caminho de **front-end → routes → controllers → models** replicando o que já existe!  
-- Exemplo, se você quiser a funcionalidade de adicionar um novo Aquário, deve criar arquivos referentes ao aquario nos diretórios e replicar também as funções.  
-- Dica: A implementação de AVISO já contém o CRUD completo! :wink:
- 
-### Fontes bibliográficas
-
-[1] https://datatracker.ietf.org/doc/html/rfc2396  
-[2] https://datatracker.ietf.org/doc/html/rfc7231
+Obrigada por acompanhar o desenvolvimento deste projeto!
