@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body {
+    background-image:url(../assets/fundo.png);
+}
+
+.header {
+    height: 80px;
+    border-bottom: 2px solid gold;
+    background-color: rgba(71, 46, 81, 0.9);
+    position: fixed;
+    /*arruamr*/
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: gold;
+}
+
+.agora {
+    font-weight: bold;
+}
+
+.navbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: gold;
+}
+
+.titulo {
+    color: gold;
+    font-size: 24px;
+
+}
+
+.box {
+    width: 800px;
+    height: 400px;
+    margin: 150px auto 0; 
+    display: flex;
+    padding: 0; 
+}
+
+.box_esquerdo {
+    width: 400px;
+    height: 400px;
+    background-color: #9b75a5;
+    text-align: center;
+    border: 2px solid rgb(30, 14, 34);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.box_direito {
+    width: 400px;
+    height: 400px;
+    background-color: #f5c1f4;
+    border: 2px solid gold;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.box_esquerdo h4 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: 472e51
+}
+
+.box_esquerdo p {
+      font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #2e073e;
+    text-align: center;
+}
+
+#mensagem_erro {
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    left: 10px;
+}
+
+.box_esquerdo a {
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 300px;
+
+}
+
+.conta {
+    margin-top: 40px;
+
+}
+
+.conta a {
+    text-decoration: none;
+    background-color: #472e51;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(230, 209, 237);
+    padding: 8px 50px;
+    border: 1px solid gold;
+    position: relative;
+    margin-top: 90px;
+}
+
+.box_direito h1 {
+    font-size: 22px;
+    margin-top: 30px;
+    color: #472e51;
+    text-align: center;
+}
+
+.box_direito p {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #472e51;
+    text-align: center;
+}
+
+input {
+    font-size: 15px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 15px auto;
+    background-color: #472e51;
+    color: white;
+}
+
+.cadastro_btn {
+    background-color:rgba(71, 46, 81, 0.9);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 130px;
+    border: none;
+    display: flex;
+    margin: 30px auto;
+
+}
+
+.footer {
+    background-color: #3a2442;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gold;
+    margin-top: 100px; 
+}
