@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baralho Cigano | Cadastro</title>
+  <link rel="stylesheet" href="./css/cadastro.css" />
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">Baralho Cigano</h1>
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Inicial</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>|</li>
+
+        <li class="agora">
+          <a href="cadastro.html">Cadastro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="box_esquerdo">
+      <h4>Faça seu Cadastro</h4>
+      <p> Acesso a quizzes exclusivos</p>
+
+      <div class="conta">
+        <a href="login.html">Já tem conta?</a>
+      </div>
+    </div>
+
+    <div class="box_direito">
+      <h1>Criar Conta</h1>
+      <p>Preencha seus dados</p>
+
+      <input type="text" id="nome_input" placeholder="Nome completo">
+      <input type="email" id="email_input" placeholder="E-mail">
+      <input type="password" id="senha_input" placeholder="Senha">
+      <input type="password" id="confirmacao_senha_input" placeholder="Confirmar senha">
+
+      <button onclick="cadastrar()" class="cadastro_btn">Cadastrar</button>
+      <div id="mensagem_erro"></div>
+      <div id="cardErro"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>Lavinia &hearts; 2025</h4>
+  </div>
+</body>
+<script>
+
+  function aguardar() {
+  }
+  function finalizarAguardar() {
+  }
+
+  function limparFormulario() {
+    nome_input.value = "";
+    email_input.value = "";
+    senha_input.value = "";
+    confirmacao_senha_input.value = "";
+  }
+ 
+  function cadastrar() {
+    aguardar(); 
+
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    
+    // 1. Limpa a mensagem de erro anterior
+    cardErro = "none";
+    mensagem_erro.innerHTML = "";
+    
+    // 2. Verificando se há algum campo em branco
+    if (
+      nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == ""
+    ) {
+      cardErro = "block";
+      mensagem_erro.innerHTML ="Por favor, preencha todos os campos obrigatórios.";
+      finalizarAguardar();
+      return false;
+    } 
+
+    // 3. Verificando se as senhas coincidem
+    if (senhaVar !== confirmacaoSenhaVar) {
+     cardErro = "block";
+      mensagem_erro.innerHTML = "Erro: A senha e a confirmação de senha não coincidem.";
+      finalizarAguardar();
+      return false;
+    }
+    
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro = "block";
+          mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          limparFormulario();
+          finalizarAguardar();
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+        } else {
+          return resposta.text().then(text => { 
+            throw new Error(text || "Houve um erro no servidor ao tentar realizar o cadastro!"); 
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.error(`#ERRO no fetch: ${erro}`);
+       cardErro = "block";
+        mensagem_erro.innerHTML = "O email inserido já existe.";
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+   cardErro = "none";
+  }
+</script>
+
+</html>

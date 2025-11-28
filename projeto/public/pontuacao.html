@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Baralho Cigano | Pontuação </title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="./css/pontuacao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onload="mostrar_grafico1(); mostrar_rank()">
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">Baralho Cigano | Pontuação</h1>
+      <ul class="navbar">
+        <li>
+        <a href="index.html">Sair</a>
+        <li>|</li>
+        <a href="quiz.html">Quiz</a>
+        <li>|</li>
+      </li>
+      <a href="tiragem.html">Tiragem</a>
+    </li>
+    <li>|</li>
+          <li class="agora">
+          <a href="#">Pontuação</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="container">
+      <p>Acesse todas as suas pontuações para ver seu progresso, comparar seus resultados e entender onde você mais evoluiu.</p>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="boxes">
+      <canvas id="myChart1"></canvas>
+ <div class="container">
+    </div>
+  </div>
+<div class="ranking-container">
+        <h1> Ranking de Pontuação</h1>
+        
+        <ol class="ranking-list">
+            <li class="ranking-item ">
+                <span class="position">1º</span>
+                <span class="nome" id="primeiro"></span>
+            </li>
+            
+            <li class="ranking-item ">
+                <span class="position">2º</span>
+                <span class="nome" id="segundo"></span>
+            </li>
+            
+            <li class="ranking-item">
+                <span class="position">3º</span>
+                <span class="nome" id="terceiro"></span>
+            </li>
+
+            <li class="ranking-item">
+                <span class="position">4º</span>
+                <span class="nome" id="quarto"></span>
+            </li>
+
+            <li class="ranking-item">
+                <span class="position">5º</span>
+                <span class="nome" id="quinto"></span>
+            </li>
+        </ol>
+        
+        </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="footer">
+    <div class="container">
+      <h4>Lavinia &hearts; 2025 </h4>
+    </div>
+  </div>
+</body>
+<script>
+
+
+
+  const ctx = document.getElementById('myChart1');
+  function mostrar_grafico1() {
+
+    let idVar = sessionStorage.ID_USUARIO
+    fetch("/medidas/mostrar_grafico1", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+            body: JSON.stringify({
+                idServer: idVar
+            })
+
+    }).then(function (resposta) {
+
+      if (resposta.ok) {
+        resposta.json().then(function (response) {
+          let certas = 0
+          let erradas = 0
+
+          response.forEach(item => {
+            erradas = item.acertos
+            certas = item.erros
+          })
+
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Erradas', 'Certas'],
+              datasets: [{
+                label: 'Quiz',
+                data: [erradas, certas],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        })
+
+      } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+
+  }
+
+  function mostrar_rank() {
+
+     fetch("/medidas/rank", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+
+    }).then(function (resposta) {
+
+      if (resposta.ok) {
+        resposta.json().then(function (response) {
+        let posicao = 0
+
+        primeiro.innerHTML = response[0].nome
+        segundo.innerHTML = response[1].nome
+        terceiro.innerHTML = response[2].nome
+        quarto.innerHTML = response[3].nome
+        quinto.innerHTML = response[4].nome
+
+      })
+
+      } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+
+  }
+
+</script>
+
+</html>
