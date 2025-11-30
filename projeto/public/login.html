@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baralho Cigano | Login</title>
     <link rel="stylesheet" href="./css/login.css" />
-
 </head>
 
 <body>
@@ -17,29 +16,28 @@
                 <li>
                     <a href="index.html">Inicial</a>
                 </li>
-        
                 <li>|</li>
                 <li class="agora">
                     <a href="login.html">Login</a>
                 </li>
-                                <li>|</li>
-
+                <li>|</li>
                 <li>
                     <a href="cadastro.html">Cadastro</a>
                 </li>
             </ul>
         </div>
     </div>
-      <div class="alerta_erro">
-    <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-    </div>  <!-- FECHADO CORRETAMENTE -->
+
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+        </div>
+    </div>
 
     <div class="box">
         <div class="box_esquerdo">
             <h4>Seja bem-vindo(a) novamente!</h4>
             <p>Acesse sua conta agora mesmo.</p>
-            <a href="cadastro.html">Cadastar</a>
+            <a href="cadastro.html">Cadastrar</a>
         </div>
         <div class="box_direito">
             <h1>Entre em sua conta</h1>
@@ -47,26 +45,47 @@
             <input type="email" id="email_input" placeholder="E-mail">
             <input type="password" id="senha_input" placeholder="Senha">
             <button class="entrar" onclick="entrar()">Efetuar Login</button>
+            <div id="mensagem_erro"></div>
+            <div id="div_erros_login"></div>
         </div>
     </div>
-         <div class="footer">
-                <h4>Lavinia &hearts; 2025</h4>
-        </div>
 
-        <div id="div_erros_login"></div>
+    <div class="footer">
+        <h4>Lavinia &hearts; 2025</h4>
     </div>
+
 </body>
 <script>
-     function entrar() {
+    function entrar() {
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+        var temArroba = false;
+        var temPonto = false;
+
+        cardErro.style.display = "none"
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Por favor, preencha todos os campos obrigatórios.";
             return false;
         }
-        
+
+        for (var i = 0; i < emailVar.length; i++) {
+            if (emailVar[i] == '@') {
+                temArroba = true;
+                i
+            }
+            if (emailVar[i] == '.') {
+                temPonto = true;
+            }
+        }
+
+        if (!temArroba || !temPonto || emailVar.length < 5) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Erro: E-mail inválido.";
+            return false;
+        }
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -93,19 +112,20 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
+                    // ir para o quiz
                     setTimeout(function () {
                         window.location = "quiz.html";
-                    }, 1000); // apenas para exibir o loading
-
+                    }, 1000);
                 });
 
             } else {
 
-                console.log("Houve um erro ao tentar realizar o login!");
+                mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login!";
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    cardErro.style.display = "block"
+                    mensagem_erro.innerHTML = "Erro no login: " + texto;
                 });
             }
 
@@ -115,11 +135,9 @@
 
         return false;
     }
-
     function sumirMensagem() {
         cardErro.style.display = "none"
-        alert('bem vindo');//arrumar
     }
-
 </script>
+
 </html>

@@ -108,8 +108,8 @@ body {
     border-radius: 5px;
     font-size: 16px;
     color: white;
-    padding: 10px 20px;
     display: inline-block;
+
     margin-top: 300px;
 
 }
@@ -132,16 +132,18 @@ body {
     margin-top: -15px; 
 }
 .conta a {
-    text-decoration: none;
-    background-color: #472e51;
+    background-color: rgba(71, 46, 81, 0.9);
     border-radius: 5px;
     font-size: 16px;
-    color: rgb(230, 209, 237);
-    padding: 8px 50px;
+    color: white;
+    padding: 10px 120px;
+    border: none;
+    display: flex;
+    margin: 230px auto;
     border: 1px solid gold;
-    position: relative;
-    margin-top: 190px;
+
 }
+
 
 .box_direito h1 {
     font-size: 22px;

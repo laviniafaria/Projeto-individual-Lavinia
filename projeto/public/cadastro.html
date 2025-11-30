@@ -72,37 +72,53 @@
     senha_input.value = "";
     confirmacao_senha_input.value = "";
   }
- 
+
   function cadastrar() {
-    aguardar(); 
+    aguardar();
 
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    
-    // 1. Limpa a mensagem de erro anterior
+    var temArroba = false;
+    var temPonto = false;
+
     cardErro = "none";
     mensagem_erro.innerHTML = "";
-    
-    // 2. Verificando se há algum campo em branco
+
     if (
       nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == ""
     ) {
       cardErro = "block";
-      mensagem_erro.innerHTML ="Por favor, preencha todos os campos obrigatórios.";
+      mensagem_erro.innerHTML = "Por favor, preencha todos os campos obrigatórios.";
       finalizarAguardar();
       return false;
-    } 
+    }
 
-    // 3. Verificando se as senhas coincidem
+
+    for (var i = 0; i < emailVar.length; i++) {
+      if (emailVar[i] == '@') {
+        temArroba = true;
+      }
+      if (emailVar[i] == '.') {
+        temPonto = true;
+      }
+    }
+
+    if (!temArroba || !temPonto || emailVar.length < 5) {
+      cardErro = "block"
+      mensagem_erro.innerHTML = "Erro: E-mail inválido.";
+      finalizarAguardar();
+      return false;
+    }
+
     if (senhaVar !== confirmacaoSenhaVar) {
-     cardErro = "block";
+      cardErro = "block";
       mensagem_erro.innerHTML = "Erro: A senha e a confirmação de senha não coincidem.";
       finalizarAguardar();
       return false;
     }
-    
+
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
@@ -129,14 +145,14 @@
           }, "2000");
 
         } else {
-          return resposta.text().then(text => { 
-            throw new Error(text || "Houve um erro no servidor ao tentar realizar o cadastro!"); 
+          return resposta.text().then(text => {
+            throw new Error(text || "Houve um erro no servidor ao tentar realizar o cadastro!");
           });
         }
       })
       .catch(function (erro) {
         console.error(`#ERRO no fetch: ${erro}`);
-       cardErro = "block";
+        cardErro = "block";
         mensagem_erro.innerHTML = "O email inserido já existe.";
         finalizarAguardar();
       });
@@ -145,7 +161,7 @@
   }
 
   function sumirMensagem() {
-   cardErro = "none";
+    cardErro = "none";
   }
 </script>
 

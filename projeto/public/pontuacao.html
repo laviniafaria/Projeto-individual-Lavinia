@@ -49,32 +49,32 @@
  <div class="container">
     </div>
   </div>
-<div class="ranking-container">
+<div class="rank">
         <h1> Ranking de Pontuação</h1>
         
-        <ol class="ranking-list">
-            <li class="ranking-item ">
-                <span class="position">1º</span>
+        <ol class="rank-lista">
+            <li class="rank_pessoa ">
+                <span class="posicao">1º</span>
                 <span class="nome" id="primeiro"></span>
             </li>
             
-            <li class="ranking-item ">
-                <span class="position">2º</span>
+            <li class="rank_pessoa ">
+                <span class="posicao">2º</span>
                 <span class="nome" id="segundo"></span>
             </li>
             
-            <li class="ranking-item">
-                <span class="position">3º</span>
+            <li class="rank_pessoa">
+                <span class="posicao">3º</span>
                 <span class="nome" id="terceiro"></span>
             </li>
 
-            <li class="ranking-item">
-                <span class="position">4º</span>
+            <li class="rank_pessoa">
+                <span class="posicao">4º</span>
                 <span class="nome" id="quarto"></span>
             </li>
 
-            <li class="ranking-item">
-                <span class="position">5º</span>
+            <li class="rank_pessoa">
+                <span class="posicao">5º</span>
                 <span class="nome" id="quinto"></span>
             </li>
         </ol>
@@ -119,15 +119,27 @@
             erradas = item.acertos
             certas = item.erros
           })
-
+          const corErradas = '#DAA520'; 
+          const corCertas = '#800080';  // Roxo 
+          
           new Chart(ctx, {
             type: 'bar',
             data: {
               labels: ['Erradas', 'Certas'],
               datasets: [{
-                label: 'Quiz',
+                label: 'Número de respostas certas e erradas',
                 data: [erradas, certas],
-                borderWidth: 1
+                
+                backgroundColor: [
+                  corErradas, 
+                  corCertas  
+                ],
+
+                borderColor: [
+                  corErradas, 
+                  corCertas  
+                ],
+                borderWidth: 2 
               }]
             },
             options: {

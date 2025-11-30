@@ -17,7 +17,7 @@
 <body>
    <div class="header">
     <div class="container">
-      <h1 class="titulo">Baralho Cigano | Pontuação</h1>
+      <h1 class="titulo">Baralho Cigano | Tiragem</h1>
       <ul class="navbar">
         <li>
         <a href="index.html">Sair</a>
@@ -36,7 +36,7 @@
   </div>
 
   <p>Sorteie uma carta para hoje:</p>
-  <button onclick="sortearcarta()">Aperte aqui</button>
+  <button onclick="sortear()">Aperte aqui</button>
   <div id="div"></div>
 
   <div class="footer">
@@ -47,120 +47,118 @@
 </body>
 
 <script> 
-    function sortearcarta() {
+    function sortear () {
     var numero = Math.floor(Math.random() * 36) + 1;
-    var mensagem = "";
+    var resultado = "";
 
     if (numero == 1) {
-      mensagem = "<b>1 — Cavaleiro</b><br>Boas notícias chegando! Movimentos rápidos e oportunidades se aproximam.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 1 Cavaleiro</b><br>Boas notícias chegando! Movimentos rápidos e oportunidades se aproximam.";
     } 
     else if (numero == 2) {
-      mensagem = "<b>2 — Trevo</b><br>Pequena sorte, chances rápidas. Um momento leve e positivo pode surgir.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 2 Trevo</b><br>Pequena sorte, chances rápidas. Um momento leve e positivo pode surgir.";
     } 
     else if (numero == 3) {
-      mensagem = "<b>3 — Navio</b><br>Movimento, viagens e mudanças. Algo novo está chegando em sua vida.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 3 Navio</b><br>Movimento, viagens e mudanças. Algo novo está chegando em sua vida.";
     } 
     else if (numero == 4) {
-      mensagem = "<b>4 — Casa</b><br>Segurança, proteção e estabilidade. Foque no lar e no bem-estar.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 4 Casa</b><br>Segurança, proteção e estabilidade. Foque no lar e no bem-estar.";
     } 
     else if (numero == 5) {
-      mensagem = "<b>5 — Árvore</b><br>Crescimento, saúde e evolução. Bom momento para fortalecer raízes.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 5 Árvore</b><br>Crescimento, saúde e evolução. Bom momento para fortalecer raízes.";
     } 
     else if (numero == 6) {
-      mensagem = "<b>6 — Nuvens</b><br>Confusão temporária. Espere antes de tomar decisões.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 6 Nuvens</b><br>Confusão temporária. Espere antes de tomar decisões.";
     } 
     else if (numero == 7) {
-      mensagem = "<b>7 — Serpente</b><br>Atenção a falsidade ou enganos. Atue com sabedoria.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 7 Serpente</b><br>Atenção a falsidade ou enganos. Atue com sabedoria.";
     } 
     else if (numero == 8) {
-      mensagem = "<b>8 — Caixão</b><br>Fim de ciclos. Transformações profundas se aproximam.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 8 Caixão</b><br>Fim de ciclos. Transformações profundas se aproximam.";
     } 
     else if (numero == 9) {
-      mensagem = "<b>9 — Buquê</b><br>Alegria, beleza e boas vibrações. Momento de brilho pessoal.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 9 Buquê</b><br>Alegria, beleza e boas vibrações. Momento de brilho pessoal.";
     } 
     else if (numero == 10) {
-      mensagem = "<b>10 — Foice</b><br>Cortes, mudanças rápidas e decisões firmes.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 10 Foice</b><br>Cortes, mudanças rápidas e decisões firmes.";
     } 
     else if (numero == 11) {
-      mensagem = "<b>11 — Chicote</b><br>Discussões ou repetição de padrões. Cuidado com conflitos.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 11 Chicote</b><br>Discussões ou repetição de padrões. Cuidado com conflitos.";
     } 
     else if (numero == 12) {
-      mensagem = "<b>12 — Pássaros</b><br>Conversas, encontros e troca de ideias.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 12 Pássaros</b><br>Conversas, encontros e troca de ideias.";
     } 
     else if (numero == 13) {
-      mensagem = "<b>13 — Criança</b><br>Novos começos, leveza e curiosidade.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 13 Criança</b><br>Novos começos, leveza e curiosidade.";
     } 
     else if (numero == 14) {
-      mensagem = "<b>14 — Raposa</b><br>Atenção ao redor. Pode haver alguém agindo com interesse próprio.";
+      div.innerHTML = "<b> A Carta sorteada foi:<br> 14 Raposa</b><br>Atenção ao redor. Pode haver alguém agindo com interesse próprio.";
     } 
     else if (numero == 15) {
-      mensagem = "<b>15 — Urso</b><br>Força, proteção e autoridade. Cuidado com controle excessivo.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br> 15 Urso</b><br>Força, proteção e autoridade. Cuidado com controle excessivo.";
     } 
     else if (numero == 16) {
-      mensagem = "<b>16 — Estrela</b><br>Esperança, sucesso e espiritualidade. Caminho iluminado.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br> 16 Estrela</b><br>Esperança, sucesso e espiritualidade. Caminho iluminado.";
     } 
     else if (numero == 17) {
-      mensagem = "<b>17 — Cegonha</b><br>Mudanças positivas, novidades e melhorias.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>17 Cegonha</b><br>Mudanças positivas, novidades e melhorias.";
     } 
     else if (numero == 18) {
-      mensagem = "<b>18 — Cachorro</b><br>Lealdade, amizade verdadeira e apoio.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>18 Cachorro</b><br>Lealdade, amizade verdadeira e apoio.";
     } 
     else if (numero == 19) {
-      mensagem = "<b>19 — Torre</b><br>Distanciamento, reflexão e estrutura.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>19 Torre</b><br>Distanciamento, reflexão e estrutura.";
     } 
     else if (numero == 20) {
-      mensagem = "<b>20 — Jardim</b><br>Socialização, encontros e expansão.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>20 Jardim</b><br>Socialização, encontros e expansão.";
     } 
     else if (numero == 21) {
-      mensagem = "<b>21 — Montanha</b><br>Obstáculos. Paciência e persistência serão necessárias.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>21 Montanha</b><br>Obstáculos. Paciência e persistência serão necessárias.";
     } 
     else if (numero == 22) {
-      mensagem = "<b>22 — Caminhos</b><br>Escolhas e decisões importantes se aproximam.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>22 Caminhos</b><br>Escolhas e decisões importantes se aproximam.";
     } 
     else if (numero == 23) {
-      mensagem = "<b>23 — Ratos</b><br>Desgaste, ansiedade e perda de energia. Cuide de si.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>23 Ratos</b><br>Desgaste, ansiedade e perda de energia. Cuide de si.";
     } 
     else if (numero == 24) {
-      mensagem = "<b>24 — Coração</b><br>Amor, emoções sinceras e sentimentos verdadeiros.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>24 Coração</b><br>Amor, emoções sinceras e sentimentos verdadeiros.";
     } 
     else if (numero == 25) {
-      mensagem = "<b>25 — Aliança</b><br>Parcerias, compromissos e união.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>25 Aliança</b><br>Parcerias, compromissos e união.";
     } 
     else if (numero == 26) {
-      mensagem = "<b>26 — Livro</b><br>Segredos, estudos e conhecimento oculto.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>26 Livro</b><br>Segredos, estudos e conhecimento oculto.";
     } 
     else if (numero == 27) {
-      mensagem = "<b>27 — Carta</b><br>Mensagens, notícias e comunicação importante.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>27 Carta </b><br>Mensagens, notícias e comunicação importante.";
     } 
     else if (numero == 28) {
-      mensagem = "<b>28 — Homem</b><br>Representa um homem importante ou energia masculina.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br> 28 Homem</b><br>Representa um homem importante ou energia masculina.";
     } 
     else if (numero == 29) {
-      mensagem = "<b>29 — Mulher</b><br>Representa uma mulher importante ou energia feminina.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>29 Mulher</b><br>Representa uma mulher importante ou energia feminina.";
     } 
     else if (numero == 30) {
-      mensagem = "<b>30 — Lírios</b><br>Paz, maturidade e harmonia.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>30 Lírios</b><br>Paz, maturidade e harmonia.";
     } 
     else if (numero == 31) {
-      mensagem = "<b>31 — Sol</b><br>Sucesso total, vitória e clareza.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>31 Sol</b><br>Sucesso total, vitória e clareza.";
     } 
     else if (numero == 32) {
-      mensagem = "<b>32 — Lua</b><br>Intuição, emoções e reconhecimento.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>32 Lua</b><br>Intuição, emoções e reconhecimento.";
     } 
     else if (numero == 33) {
-      mensagem = "<b>33 — Chave</b><br>Soluções, oportunidades e respostas chegando.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>33 Chave</b><br>Soluções, oportunidades e respostas chegando.";
     } 
     else if (numero == 34) {
-      mensagem = "<b>34 — Peixes</b><br>Abundância, prosperidade e fluxo financeiro.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>34 Peixes</b><br>Abundância, prosperidade e fluxo financeiro.";
     } 
     else if (numero == 35) {
-      mensagem = "<b>35 — Âncora</b><br>Estabilidade, segurança e firmeza.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>35 Âncora</b><br>Estabilidade, segurança e firmeza.";
     } 
     else if (numero == 36) {
-      mensagem = "<b>36 — Cruz</b><br>Provas, aprendizado e superação espiritual.";
+      div.innerHTML = "<b>A Carta sorteada foi:<br>36 Cruz</b><br>Provas, aprendizado e superação espiritual.";
     }
-
-    div.innerHTML = mensagem;
   }
 
 </script>

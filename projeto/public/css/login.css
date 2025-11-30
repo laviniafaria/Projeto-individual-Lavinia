@@ -1,14 +1,14 @@
-      * {
-          margin: 0;
-          padding: 0;
-          font-family: Arial;
-      }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
 
-      body {
-          background-image: url(../assets/fundo.png);
-      }
+body {
+    background-image: url(../assets/fundo.png);
+}
 
-      .header {
+.header {
     height: 80px;
     border-bottom: 2px solid gold;
     background-color: rgba(71, 46, 81, 0.9);
@@ -52,144 +52,160 @@
 
 }
 
-      .box {
-          width: 800px;
-          height: 400px;
-          margin: 150px auto 0;
-          display: flex;
-          padding: 0;
-      }
+.box {
+    width: 800px;
+    height: 400px;
+    margin: 150px auto 0;
+    display: flex;
+    padding: 0;
+}
 
-      .box_esquerdo {
-          width: 400px;
-          height: 400px;
-          background-color: #9b75a5;
-          text-align: center;
-          border: 2px solid gold;
-          padding: 20px;
-          border-radius: 5px;
+.box_esquerdo {
+    width: 400px;
+    height: 400px;
+    background-color: #9b75a5;
+    text-align: center;
+    border: 2px solid rgb(30, 14, 34);
+    padding: 20px;
+    border-radius: 5px;
 
-      }
+}
 
-      .box_direito {
-          width: 400px;
-          height: 400px;
-          background-color: #f5c1f4;
-          border: 2px solid gold;
-          padding: 20px;
-          border-radius: 5px;
+.box_direito {
+    width: 400px;
+    height: 400px;
+    background-color: #f5c1f4;
+    border: 2px solid gold;
+    padding: 20px;
+    border-radius: 5px;
 
-      }
+}
 
-      .box_esquerdo p{
-            font-size: 15px;
-          margin-top: 30px;
-          margin-bottom: 20px;
-          color: #472e51
-      
-      }
-      .box_esquerdo h4 {
-          font-size: 22px;
-          margin-top: 30px;
-          margin-bottom: 20px;
-          color: #472e51
-      }
+.box_esquerdo p {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #472e51
+}
 
-      .box_esquerdo li {
-          font-size: 20px;
-          margin-bottom: 20px;
-          color: white;
-          text-align: center;
-      }
+.box_esquerdo h4 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #472e51
+}
 
-      .box_esquerdo a {
-          background-color: rgba(71, 46, 81, 0.9);
-          border-radius: 5px;
-          font-size: 16px;
-          color: white;
-          padding: 10px 150px;
-          margin-top: 890px;
-          border: none;
-          display: flex;
-          margin: 185px auto;
-          text-decoration: none;
-          border: 2px solid gold;
+.box_esquerdo li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
 
-      }
+.box_esquerdo a {
+    background-color: rgba(71, 46, 81, 0.9);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 150px;
+    margin-top: 890px;
+    border: none;
+    display: flex;
+    margin: 185px auto;
+    text-decoration: none;
+    border: 1px solid gold;
 
-      .conta {
-          margin-top: 40px;
+}
 
-      }
+.card_erro {
+    color: rgb(37, 12, 45);
+    font-size: 16px;
+    text-align: center;
+    margin-top: -60px; 
 
-      .box_direito h1 {
-          font-size: 22px;
-          margin-bottom: 25px;
-          color: #472e51;
-          text-align: center;
-      }
+}
 
-      .box_direito p {
-          font-size: 15px;
-          margin-bottom: 20px;
-          color: #472e51;
-          text-align: center;
-      }
-
-      input {
-          font-size: 15px;
-          padding: 10px;
-          width: 300px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          display: block;
-          margin: 0 auto 15px auto;
-          background-color: #472e51;
-          color: white;
-      }
+#mensagem_erro {
+    color: rgb(37, 12, 45);
+    font-size: 16px;
+    text-align: center;
+    margin-top: -60px; 
+}
 
 
-      .footer {
-          background-color: #3a2442;
-          height: 60px;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-top: 2px solid gold;
-          margin-top: 10px;
-      }
+.conta {
+    margin-top: 40px;
 
-      input {
-          font-size: 15px;
-          padding: 15px;
-          width: 300px;
-          border: 1px solid rgb(195, 0, 255);
-          border-radius: 5px;
-          display: block;
-          margin: 0 auto 15px auto;
-          position: relative;
-          top: 50px;
-      }
+}
 
-      .entrar {
-          background-color: rgba(71, 46, 81, 0.9);
-          border-radius: 5px;
-          font-size: 16px;
-          color: white;
-          padding: 10px 120px;
-          border: none;
-          display: flex;
-          margin: 90px auto;
-      }
+.box_direito h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #472e51;
+    text-align: center;
+}
 
-      .footer {
-          background-color: #3a2442;
-          height: 60px;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 2px solid gold;
-          margin-top: 100px;
-      }
+.box_direito p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #472e51;
+    text-align: center;
+}
+
+input {
+    font-size: 15px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 15px auto;
+    background-color: #472e51;
+    color: white;
+}
+
+
+.footer {
+    background-color: #3a2442;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid gold;
+    margin-top: 10px;
+}
+
+input {
+    font-size: 15px;
+    padding: 15px;
+    width: 300px;
+    border: 1px solid rgb(195, 0, 255);
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 15px auto;
+    position: relative;
+    top: 50px;
+}
+
+.entrar {
+    background-color: rgba(71, 46, 81, 0.9);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 120px;
+    border: none;
+    display: flex;
+    margin: 90px auto;
+}
+
+.footer {
+    background-color: #3a2442;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gold;
+    margin-top: 100px;
+}

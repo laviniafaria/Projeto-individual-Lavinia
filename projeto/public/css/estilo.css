@@ -216,11 +216,14 @@ body {
 /* FOOTER */
 
 .footer {
-    height: 50px;
-    color: #fff;
+    background-color: #3a2442;
+    height: 60px;
+    color: white;
     display: flex;
-    font-size: 15px;
-    border-top: 2px solid gold;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gold;
+    margin-top: 100px;
 }
 
 .footer .container {
